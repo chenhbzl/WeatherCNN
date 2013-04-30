@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <servlet>
+  <servlet-name>WeatherCNN</servlet-name>
+  <servlet-class>com.gae.weatherservlet.GetWeatherCNNServlet</servlet-class>
+ </servlet>
+  <servlet>
+  <servlet-name>CityInfo</servlet-name>
+  <servlet-class>com.gae.weatherservlet.GetCityIDbyNameServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>CityInfo</servlet-name>
+  <url-pattern>/getCityID</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>WeatherCNN</servlet-name>
+  <url-pattern>/WeatherCNN</url-pattern>
+ </servlet-mapping>
+ <welcome-file-list>
+  <welcome-file>index.html</welcome-file>
+ </welcome-file-list>
+ <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>com.gae.util.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+</web-app>

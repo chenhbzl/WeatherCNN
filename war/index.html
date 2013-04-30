@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>getWeatherCNN by Google App Engine</title>
+  </head>
+
+  <body>
+    <h1>getWeatherCNN by Google App Engine!</h1>
+	
+    <table>
+      <tr>
+        <td colspan="2" style="font-weight:bold;">Available Services:</td>        
+      </tr>
+      <tr>
+        <td>1. 根据城市名称查询天气情况：</td>
+      </tr>
+       <tr>
+        <td>1.1 根据城市中文名称查询天气，返回XML格式数据：</td>
+      </tr>
+      <tr>
+        <td><a href="/WeatherCNN?city=广州&resultFormat=xml">http://weathercnn.appspot.com/WeatherCNN?city=广州&resultFormat=xml</a></td>
+      </tr>
+      
+       <tr>
+        <td>1.2 根据城市英文名称查询天气，返回json格式数据：</td>
+      </tr>
+      <tr>
+        <td><a href="/WeatherCNN?city=guangzhou&resultFormat=json">http://weathercnn.appspot.com/WeatherCNN?city=guangzhou&resultFormat=json</a></td>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+      </tr>
+       <tr>
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td>2. 根据城市名称查询城市代码，该代码为Weather.com.cn对各城市的天气编码：</td>
+      </tr>
+      
+      <tr>
+        <td>2.1 根据城市中文名称查询城市代码：</td>
+      </tr>
+      <tr>
+        <td><a href="/getCityID?cityName=北京">http://weathercnn.appspot.com/getCityID?cityName=北京</a></td>
+      </tr>
+       <tr>
+        <td>2.2 根据城市英文名称查询城市代码：</td>
+      </tr>
+      <tr>
+        <td><a href="/getCityID?cityName=beijing">http://weathercnn.appspot.com/getCityID?cityName=beijing</a></td>
+      </tr>
+    </table>
+    <li>
+    </li>
+    <label>如有问题请联系tanzt(tanzetao@gmail.com)</label>
+  </body>
+</html>
